@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get "home/index"
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  ActiveAdmin.routes(self)
   resources :posts do
     resources :comments
   end
@@ -12,6 +17,9 @@ Rails.application.routes.draw do
   # Render dynamic PWA files from app/views/pwa/*
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
+
+  root 'home#index'
+
 
 
 
