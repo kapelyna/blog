@@ -1,14 +1,19 @@
 source "https://rubygems.org"
 
-gem 'activeadmin'
+gem "activeadmin"
 
 # Plus integrations with:
-gem 'devise'
-gem 'cancancan'
-gem 'draper'
-gem 'pundit'
-gem 'sassc'
-gem 'devise'
+
+gem "cancancan"
+gem "draper"
+gem "pundit"
+gem "sassc"
+gem "devise"
+gem "telegram-bot-ruby"
+gem "dotenv-rails"
+gem "dotenv"
+gem "dotenv-rails", groups: [ :development, :test ]
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
@@ -60,7 +65,7 @@ group :development do
   gem "web-console"
 
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
-  gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+  gem "error_highlight", ">= 0.4.0", platforms: [ :ruby ]
 end
 
 group :test do
